@@ -1,0 +1,170 @@
+<!DOCTYPE html> <html><head>
+        <title>story</title>
+    <style>/* Feel free to change any of the styling below!*/
+body {
+    text-align: center;
+    background: black;
+background-image:   url("https://wallpapercave.com/wp/wp9500494.jpg");
+
+
+}
+
+img {
+    width: 350px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+button {
+    height: 40px;
+}
+
+
+h1 {
+    font-size: 50px;
+    color: red;
+}
+
+/* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
+
+ 
+.story-opening{
+    display: block;
+}
+
+
+.buttons{
+   display:block;
+}
+
+
+ 
+.option-one-screen{
+   display:none;
+}
+
+
+
+.option-two-screen{
+   display:none;
+}
+
+
+
+.option-one-end{
+   display:none;
+}
+
+
+ 
+.option-two-end{
+   display:none;
+}
+</style></head>
+    <body>
+        <!--Between lines 8-12, put the opening of your story-->
+        <div class="title">messi had the soccer ball</div>
+        <div class="story-opening">
+            <img src="https://www.ocregister.com/wp-content/uploads/2023/09/LDN-L-LAFC-0904-KB9-2.jpg?w=620">
+            <h1>messi had the soccer ball he had 20 seconds to kick it or passd it to his team it</h1>
+        </div>
+        <!--Change the text of the buttons to the options relevant to your story!-->
+        <div class="buttons">
+            <button class="option-one">Option 1 he kicks the soccer ball </button>
+            <button class="option-two">Option 2 pass the soccer ball to his team </button>
+        </div>
+        
+        <!--Between lines 19-22, put the part of the story the user will see if they picked option one-->
+        <div class="option-one-screen">
+            <h1>he missed!</h1>
+            <img src="https://tds-images.thedailystar.net/sites/default/files/feature/images/messi_miss.gif">
+        </div>
+        <!--Between lines 24-27, put the part of the story the user will see if they picked option two-->
+        <div class="option-two-screen">
+            <h1>messi kicks the soccer ball and missed it </h1>
+            <img src="https://tds-images.thedailystar.net/sites/default/files/feature/images/messi_miss.gif">
+        </div>
+        <!--Between lines 29-32, put the end of the story if the user chose option 1-->
+        <div class="option-one-end">
+            <h1> messi mide the soccer ball in the goal  </h1>
+            <img src="https://www.fcbarcelonanoticias.com/uploads/s1/47/14/1/messi-penalti-47141.jpeg">
+        </div>
+        <!--Between lines 29-32, put the end of the story if the user chose option 2-->
+        <div class="option-two-end">
+            <h1>Put final part of your story based on if they chosen no at the beginning </h1>
+            <img src="https://st2.depositphotos.com/2218430/6852/i/950/depositphotos_68527765-stock-photo-fc-barcelona-lionel-messi-in.jpg">
+        </div>
+    
+<script>
+/*__POPCODESTART__*/
+/* Declare variables below to save the different sections (divs) of your story*/
+var body = document.querySelector("body");
+var title = document.querySelector(".title");
+var opening = document.querySelector(".story-opening");
+var buttons = document.querySelector(".buttons");
+var buttonOne = document.querySelector(".option-one");
+var buttonTwo = document.querySelector(".option-two");
+var optionOne = document.querySelector(".option-one-screen");
+var optionTwo = document.querySelector(".option-two-screen");
+var optionOneImg = document.querySelector(".option-one-img");
+var optionTwoEnd = document.querySelector(".option-one-end");
+/* When you're ready to make event handlers, uncomment the code below. Then fill in the blanks with the correct variables!*/
+
+buttonOne.onclick = function () {
+  opening.style.display = "none";
+  buttons.style.display = "none";
+  optionTwoEnd.style.display = "block";
+};
+
+buttonTwo.onclick = function () {
+  opening.style.display = "none";
+  buttons.style.display = "none";
+  optionTwo.style.display = "block";
+};
+
+optionOneImg = function optionOneImg() {
+  optionOne.style.display = "none";
+  optionTwoEnd.style.display = "block";
+};
+/*
+INSERT_VARIABLE.onclick=function(){
+
+};
+   
+
+INSERT_VARIABLE.onclick=function(){
+
+};
+
+*/
+// This code will change the text of the <p> tag when you hover over it 
+
+
+title.onmouseover = function () {
+  title.innerHTML = "Tehe!";
+};
+
+body.onkeydown = function () {
+  title.style.color = "red";
+}; // var x = document.getElementById("myAudio").autoplay;
+
+
+setTimeout(function () {
+  title.innerHTML = "The End";
+}, 12000);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJvZHkiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJ0aXRsZSIsIm9wZW5pbmciLCJidXR0b25zIiwiYnV0dG9uT25lIiwiYnV0dG9uVHdvIiwib3B0aW9uT25lIiwib3B0aW9uVHdvIiwib3B0aW9uT25lSW1nIiwib3B0aW9uVHdvRW5kIiwib25jbGljayIsInN0eWxlIiwiZGlzcGxheSIsIm9ubW91c2VvdmVyIiwiaW5uZXJIVE1MIiwib25rZXlkb3duIiwiY29sb3IiLCJzZXRUaW1lb3V0Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLElBQUlBLElBQUksR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLE1BQXZCLENBQVg7QUFDQSxJQUFJQyxLQUFLLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFaO0FBQ0EsSUFBSUUsT0FBTyxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsZ0JBQXZCLENBQWQ7QUFDQSxJQUFJRyxPQUFPLEdBQUdKLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixDQUFkO0FBQ0EsSUFBSUksU0FBUyxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsYUFBdkIsQ0FBaEI7QUFDQSxJQUFJSyxTQUFTLEdBQUdOLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixhQUF2QixDQUFoQjtBQUNBLElBQUlNLFNBQVMsR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLG9CQUF2QixDQUFoQjtBQUNBLElBQUlPLFNBQVMsR0FBR1IsUUFBUSxDQUFDQyxhQUFULENBQXVCLG9CQUF2QixDQUFoQjtBQUNBLElBQUlRLFlBQVksR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLGlCQUF2QixDQUFuQjtBQUNBLElBQUlTLFlBQVksR0FBR1YsUUFBUSxDQUFDQyxhQUFULENBQXVCLGlCQUF2QixDQUFuQjtBQU9BOztBQUNBSSxTQUFTLENBQUNNLE9BQVYsR0FBb0IsWUFBVztBQUMzQlIsRUFBQUEsT0FBTyxDQUFDUyxLQUFSLENBQWNDLE9BQWQsR0FBd0IsTUFBeEI7QUFDQVQsRUFBQUEsT0FBTyxDQUFDUSxLQUFSLENBQWNDLE9BQWQsR0FBd0IsTUFBeEI7QUFDQUgsRUFBQUEsWUFBWSxDQUFDRSxLQUFiLENBQW1CQyxPQUFuQixHQUE2QixPQUE3QjtBQUNILENBSkQ7O0FBS0FQLFNBQVMsQ0FBQ0ssT0FBVixHQUFvQixZQUFXO0FBQzNCUixFQUFBQSxPQUFPLENBQUNTLEtBQVIsQ0FBY0MsT0FBZCxHQUF3QixNQUF4QjtBQUNBVCxFQUFBQSxPQUFPLENBQUNRLEtBQVIsQ0FBY0MsT0FBZCxHQUF3QixNQUF4QjtBQUNBTCxFQUFBQSxTQUFTLENBQUNJLEtBQVYsQ0FBZ0JDLE9BQWhCLEdBQTBCLE9BQTFCO0FBQ0gsQ0FKRDs7QUFNQUosWUFBWSxHQUFHLHdCQUFXO0FBQ3RCRixFQUFBQSxTQUFTLENBQUNLLEtBQVYsQ0FBZ0JDLE9BQWhCLEdBQTBCLE1BQTFCO0FBQ0FILEVBQUFBLFlBQVksQ0FBQ0UsS0FBYixDQUFtQkMsT0FBbkIsR0FBNkIsT0FBN0I7QUFDSCxDQUhEO0FBSUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUdBOzs7QUFDQVgsS0FBSyxDQUFDWSxXQUFOLEdBQW9CLFlBQVc7QUFDM0JaLEVBQUFBLEtBQUssQ0FBQ2EsU0FBTixHQUFrQixPQUFsQjtBQUNILENBRkQ7O0FBR0FoQixJQUFJLENBQUNpQixTQUFMLEdBQWlCLFlBQVc7QUFDeEJkLEVBQUFBLEtBQUssQ0FBQ1UsS0FBTixDQUFZSyxLQUFaLEdBQW9CLEtBQXBCO0FBQ0gsQ0FGRCxDLENBSUE7OztBQUVBQyxVQUFVLENBQUMsWUFBTTtBQUFDaEIsRUFBQUEsS0FBSyxDQUFDYSxTQUFOLEdBQWtCLFNBQWxCO0FBQTZCLENBQXJDLEVBQXVDLEtBQXZDLENBQVYiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBEZWNsYXJlIHZhcmlhYmxlcyBiZWxvdyB0byBzYXZlIHRoZSBkaWZmZXJlbnQgc2VjdGlvbnMgKGRpdnMpIG9mIHlvdXIgc3RvcnkqL1xubGV0IGJvZHkgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiYm9keVwiKTtcbmxldCB0aXRsZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIudGl0bGVcIik7XG5sZXQgb3BlbmluZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc3Rvcnktb3BlbmluZ1wiKTtcbmxldCBidXR0b25zID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5idXR0b25zXCIpO1xubGV0IGJ1dHRvbk9uZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIub3B0aW9uLW9uZVwiKTtcbmxldCBidXR0b25Ud28gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLm9wdGlvbi10d29cIik7XG5sZXQgb3B0aW9uT25lID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5vcHRpb24tb25lLXNjcmVlblwiKTtcbmxldCBvcHRpb25Ud28gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLm9wdGlvbi10d28tc2NyZWVuXCIpO1xubGV0IG9wdGlvbk9uZUltZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIub3B0aW9uLW9uZS1pbWdcIik7XG5sZXQgb3B0aW9uVHdvRW5kID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5vcHRpb24tb25lLWVuZFwiKTtcblxuXG5cblxuXG5cbi8qIFdoZW4geW91J3JlIHJlYWR5IHRvIG1ha2UgZXZlbnQgaGFuZGxlcnMsIHVuY29tbWVudCB0aGUgY29kZSBiZWxvdy4gVGhlbiBmaWxsIGluIHRoZSBibGFua3Mgd2l0aCB0aGUgY29ycmVjdCB2YXJpYWJsZXMhKi9cbmJ1dHRvbk9uZS5vbmNsaWNrID0gZnVuY3Rpb24oKSB7XG4gICAgb3BlbmluZy5zdHlsZS5kaXNwbGF5ID0gXCJub25lXCI7XG4gICAgYnV0dG9ucy5zdHlsZS5kaXNwbGF5ID0gXCJub25lXCI7XG4gICAgb3B0aW9uVHdvRW5kLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG59O1xuYnV0dG9uVHdvLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiAgICBvcGVuaW5nLnN0eWxlLmRpc3BsYXkgPSBcIm5vbmVcIjtcbiAgICBidXR0b25zLnN0eWxlLmRpc3BsYXkgPSBcIm5vbmVcIjtcbiAgICBvcHRpb25Ud28uc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbn07XG5cbm9wdGlvbk9uZUltZyA9IGZ1bmN0aW9uKCkge1xuICAgIG9wdGlvbk9uZS5zdHlsZS5kaXNwbGF5ID0gXCJub25lXCI7XG4gICAgb3B0aW9uVHdvRW5kLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG59O1xuLypcbklOU0VSVF9WQVJJQUJMRS5vbmNsaWNrPWZ1bmN0aW9uKCl7XG5cbn07XG4gICBcblxuSU5TRVJUX1ZBUklBQkxFLm9uY2xpY2s9ZnVuY3Rpb24oKXtcblxufTtcblxuKi9cblxuXG4vLyBUaGlzIGNvZGUgd2lsbCBjaGFuZ2UgdGhlIHRleHQgb2YgdGhlIDxwPiB0YWcgd2hlbiB5b3UgaG92ZXIgb3ZlciBpdCBcbnRpdGxlLm9ubW91c2VvdmVyID0gZnVuY3Rpb24oKSB7XG4gICAgdGl0bGUuaW5uZXJIVE1MID0gXCJUZWhlIVwiO1xufTtcbmJvZHkub25rZXlkb3duID0gZnVuY3Rpb24oKSB7XG4gICAgdGl0bGUuc3R5bGUuY29sb3IgPSBcInJlZFwiO1xufTtcblxuLy8gdmFyIHggPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcIm15QXVkaW9cIikuYXV0b3BsYXk7XG5cbnNldFRpbWVvdXQoKCkgPT4ge3RpdGxlLmlubmVySFRNTCA9IFwiVGhlIEVuZFwiO30sIDEyMDAwKTsgIFxuXG5cbiJdfQ==</script></body></html>
